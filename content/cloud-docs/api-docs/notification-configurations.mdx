@@ -185,7 +185,7 @@ If `enabled` is set to `true`, a verification request will be sent before saving
 ```json
 {
   "data": {
-    "type": "notification-configurations",
+    "type": "notification-configuration",
     "attributes": {
       "destination-type": "generic",
       "enabled": true,
@@ -209,7 +209,7 @@ If `enabled` is set to `true`, a verification request will be sent before saving
 ```json
 {
   "data": {
-    "type": "notification-configurations",
+    "type": "notification-configuration",
     "attributes": {
       "destination-type": "email",
       "enabled": true,
@@ -249,7 +249,7 @@ curl \
 {
   "data": {
     "id": "nc-AeUQ2zfKZzW9TiGZ",
-    "type": "notification-configurations",
+    "type": "notification-configuration",
     "attributes": {
       "enabled": true,
       "name": "Webhook server test",
@@ -363,7 +363,7 @@ curl \
   "data": [
     {
       "id": "nc-W6VGEi8A7Cfoaf4K",
-      "type": "notification-configurations",
+      "type": "notification-configuration",
       "attributes": {
         "enabled": false,
         "name": "Slack: #devops",
@@ -392,7 +392,7 @@ curl \
     },
     {
       "id": "nc-AeUQ2zfKZzW9TiGZ",
-      "type": "notification-configurations",
+      "type": "notification-configuration",
       "attributes": {
         "enabled": true,
         "name": "Webhook server test",
@@ -498,7 +498,7 @@ curl \
 {
   "data": {
     "id": "nc-AeUQ2zfKZzW9TiGZ",
-      "type": "notification-configurations",
+      "type": "notification-configuration",
       "attributes": {
         "enabled": true,
         "name": "Webhook server test",
@@ -592,7 +592,7 @@ If the `enabled` attribute is true, updating the configuration will cause Terraf
 
 | Status  | Response                                                      | Reason                                                                       |
 | ------- | ------------------------------------------------------------- | ---------------------------------------------------------------------------- |
-| [200][] | [JSON API document][] (`type: "notification-configurations"`) | Successfully updated the notification configuration                          |
+| [200][] | [JSON API document][] (`type: "notification-configuration"`) | Successfully updated the notification configuration                          |
 | [400][] | [JSON API error object][]                                     | Unable to complete verification request to destination URL                   |
 | [404][] | [JSON API error object][]                                     | Notification configuration not found, or user unauthorized to perform action |
 | [422][] | [JSON API error object][]                                     | Malformed request body (missing attributes, wrong types, etc.)               |
@@ -623,7 +623,7 @@ If `enabled` is set to `true`, a verification request will be sent before saving
 {
   "data": {
     "id": "nc-W6VGEi8A7Cfoaf4K",
-    "type": "notification-configurations",
+    "type": "notification-configuration",
     "attributes": {
       "enabled": false,
       "name": "Slack: #devops",
@@ -657,7 +657,7 @@ curl \
 {
   "data": {
     "id": "nc-W6VGEi8A7Cfoaf4K",
-    "type": "notification-configurations",
+    "type": "notification-configuration",
     "attributes": {
       "enabled": false,
       "name": "Slack: #devops",
@@ -700,7 +700,7 @@ This will cause Terraform Cloud to send a verification request for the specified
 
 | Status  | Response                                                      | Reason                                                     |
 | ------- | ------------------------------------------------------------- | ---------------------------------------------------------- |
-| [200][] | [JSON API document][] (`type: "notification-configurations"`) | Successfully verified the notification configuration       |
+| [200][] | [JSON API document][] (`type: "notification-configuration"`) | Successfully verified the notification configuration       |
 | [400][] | [JSON API error object][]                                     | Unable to complete verification request to destination URL |
 
 ### Sample Request
@@ -719,7 +719,7 @@ curl \
 {
   "data": {
     "id": "nc-AeUQ2zfKZzW9TiGZ",
-      "type": "notification-configurations",
+      "type": "notification-configuration",
       "attributes": {
         "enabled": true,
         "name": "Webhook server test",
